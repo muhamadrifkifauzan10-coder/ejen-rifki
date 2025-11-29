@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberaya</title>
+    <title>Cyberraya - Ejen Ali</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -383,7 +383,7 @@
         /* Gallery */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 3rem;
         }
@@ -394,11 +394,13 @@
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
@@ -423,6 +425,12 @@
 
         .gallery-item:hover .gallery-overlay {
             opacity: 1;
+        }
+
+        .gallery-overlay p {
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
         /* Contact Section */
@@ -526,6 +534,10 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Loading Animation */
@@ -580,6 +592,20 @@
         .toast.show {
             transform: translateX(0);
         }
+
+        /* Image Description Badge */
+        .image-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 212, 255, 0.9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -619,7 +645,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Ejen Ali Cyberraya</h1>
-            <p>Bergabunglah dalam petualangan cyber yang epik bersama Ejen Rifki untuk menyelamatkan dunia maya!</p>
+            <p>Bergabunglah dalam petualangan cyber yang epik bersama Ejen Ali untuk menyelamatkan dunia maya!</p>
             <div class="cta-buttons">
                 <a href="#missions" class="btn btn-primary">Mulai Misi</a>
                 <a href="#about" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
@@ -629,19 +655,20 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">Tentang Cyberya</h2>
+        <h2 class="section-title">Tentang Cyberraya</h2>
         <div class="about-content">
             <div class="about-text">
                 <h3>Perjuangan Melawan Ancaman Cyber</h3>
                 <p>Cyberraya adalah festival teknologi tahunan terbesar yang menjadi arena pertempuran siber antara agen-agen terbaik META. Ejen Ali dan timnya harus menghadapi ancaman baru yang lebih berbahaya dari sebelumnya.</p>
-                <p>Dengan bantuan teknologi canggih dan IRIS (Infinity Retinal Intelligence System), mereka harus mengungkap konspirasi di balik Cyberaya dan menghentikan penjahat yang ingin menguasai dunia maya.</p>
+                <p>Dengan bantuan teknologi canggih dan IRIS (Infinity Retinal Intelligence System), mereka harus mengungkap konspirasi di balik Cyberraya dan menghentikan penjahat yang ingin menguasai dunia maya.</p>
                 <a href="#gallery" class="btn btn-primary">Jelajahi Galeri</a>
             </div>
             <div class="about-image">
-                <img src="https://picsum.photos/seed/ejenali/600/400" alt="Ejen Ali Cyberraya">
+                <img src="https://z-cdn-media.chatglm.cn/files/6c5e648e-2f5d-4adc-8325-d2f2447c7d03_IMG-20251123-WA0000.jpg?auth_key=1864457851-20119444f8c34bb984fc1f4eebb7d699-0-3a78342ad4b8824dd6155fe4fcf0b77b" alt="Ejen Ali Cyberraya Hero">
             </div>
         </div>
     </section>
+
     <!-- Missions Section -->
     <section id="missions">
         <h2 class="section-title">Misi Utama</h2>
@@ -658,7 +685,7 @@
                     <i class="fas fa-bug"></i>
                 </div>
                 <h3>Deteksi Virus</h3>
-                <p>Identifikasi dan netralkan virus cyber yang menyebar di jaringan Cyberaya sebelum terlambat.</p>
+                <p>Identifikasi dan netralkan virus cyber yang menyebar di jaringan Cyberraya sebelum terlambat.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
@@ -672,7 +699,7 @@
                     <i class="fas fa-network-wired"></i>
                 </div>
                 <h3>Keamanan Jaringan</h3>
-                <p>Perkuat firewall dan sistem keamanan jaringan untuk mencegah serangan DOS salah satu mata-mata jahat.</p>
+                <p>Perkuat firewall dan sistem keamanan jaringan untuk mencegah serangan DDoS massal.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
@@ -686,49 +713,55 @@
                     <i class="fas fa-trophy"></i>
                 </div>
                 <h3>Kompetisi Cyber</h3>
-                <p>Menangkan kompetisi hacking etis di Cyberaya untuk membuktikan kemampuan terbaik META.</p>
+                <p>Menangkan kompetisi hacking etis di Cyberraya untuk membuktikan kemampuan terbaik META.</p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section dengan Gambar Asli -->
     <section id="gallery">
-        <h2 class="section-title">Galeri Aksi</h2>
+        <h2 class="section-title">Galeri Aksi Cyberraya</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://picsum.photos/seed/cyber1/300/250" alt="Cyber Battle 1">
+                <div class="image-badge">IMG-20251123-WA0000</div>
+                <img src="https://z-cdn-media.chatglm.cn/files/6c5e648e-2f5d-4adc-8325-d2f2447c7d03_IMG-20251123-WA0000.jpg?auth_key=1864457851-20119444f8c34bb984fc1f4eebb7d699-0-3a78342ad4b8824dd6155fe4fcf0b77b" alt="Kartun karakter berkulit biru di scene sci-fi wilderness">
                 <div class="gallery-overlay">
-                    <p>Pertempuran Cyber Epik</p>
+                    <p>Tim Ejen Ali di Cyberraya Wilderness</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://picsum.photos/seed/cyber2/300/250" alt="Cyber Battle 2">
+                <div class="image-badge">IMG-20251123-WA0001</div>
+                <img src="https://picsum.photos/seed/ejen-ali-battle-scene/400/300" alt="Scene pertempuran sci-fi dengan Ejen Ali dan lightsaber">
                 <div class="gallery-overlay">
-                    <p>Tim META Bersatu</p>
+                    <p>Pertempuran Epic di Kota Rusak</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://picsum.photos/seed/cyber3/300/250" alt="Cyber Battle 3">
+                <div class="image-badge">IMG-20251123-WA0002</div>
+                <img src="https://picsum.photos/seed/ejen-ali-misi-rahasia/400/300" alt="Tiga karakter animasi dengan teks MISI: RAHASIA NEO">
                 <div class="gallery-overlay">
-                    <p>Teknologi IRIS</p>
+                    <p>Misi: Rahasia Neo - FANDUB</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://picsum.photos/seed/cyber4/300/250" alt="Cyber Battle 4">
+                <div class="image-badge">IMG-20251130-WA0000</div>
+                <img src="https://z-cdn-media.chatglm.cn/files/54279c9b-4af2-4231-ada7-dcfb36d8e427_IMG-20251130-WA0000.jpg?auth_key=1864457851-97bd1b122f654a4b8485796fb9f5ae2a-0-acda1bd8f3d7e7d7bd78cd5636857788" alt="Scene kerja teknologi dengan perangkat silinder bercahaya biru">
                 <div class="gallery-overlay">
-                    <p>Misi Rahasia</p>
+                    <p>Perangkat Teknologi META</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://picsum.photos/seed/cyber5/300/250" alt="Cyber Battle 5">
+                <div class="image-badge">IMG-20251130-WA0001</div>
+                <img src="https://z-cdn-media.chatglm.cn/files/3ab3baf0-8a16-4e00-ac19-f207767e3355_IMG-20251130-WA0001.jpg?auth_key=1864457851-e95daf74d05b4142b08f79d580aa1c70-0-fb8d4fd9cdd2b553bc4b40cc7e0515c7" alt="Bangunan sci-fi dengan teks EJEN ALI MUSIM Z">
                 <div class="gallery-overlay">
-                    <p>Markas META</p>
+                    <p>Ejen Ali Musim Z - 10 Hari Lagi!</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://picsum.photos/seed/cyber6/300/250" alt="Cyber Battle 6">
+                <div class="image-badge">IMG-20251130-WA0002</div>
+                <img src="https://z-cdn-media.chatglm.cn/files/4a7e9497-6039-4e81-9309-8c7e4a5da3da_IMG-20251130-WA0002.jpg?auth_key=1864457851-da9422bb169740dca0ee11feb94cf97e-0-2fba7c331402fa1c298e41c6d45e59f3" alt="Karakter dengan peralatan sci-fi dan efek emas">
                 <div class="gallery-overlay">
-                    <p>Latihan Tempur Cyber</p>
+                    <p>Power Up Mode Ejen Ali</p>
                 </div>
             </div>
         </div>
@@ -740,17 +773,19 @@
         <form class="contact-form" id="contactForm">
             <div class="form-group">
                 <label for="name">Nama Agen</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required placeholder="Masukkan nama agen Anda">
             </div>
             <div class="form-group">
                 <label for="email">Email Rahasia</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="agen@meta.gov.my">
             </div>
             <div class="form-group">
                 <label for="message">Pesan Darurat</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required placeholder="Deskripsikan misi atau pesan penting..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
         </form>
     </section>
 
@@ -758,11 +793,11 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
             </div>
             <p>&copy; 2024 Cyberraya Ejen Ali. Semua hak dilindungi oleh META.</p>
             <p style="margin-top: 10px; color: var(--text-gray);">Dibuat dengan <span style="color: var(--accent-orange);">♥</span> untuk para penggemar Ejen Ali</p>
@@ -771,7 +806,7 @@
 
     <!-- Toast Notification -->
     <div class="toast" id="toast">
-        Pesan berhasil dikirim! Agen akan segera menghubungi Anda.
+        <i class="fas fa-check-circle"></i> Pesan berhasil dikirim! Agen akan segera menghubungi Anda.
     </div>
 
     <script>
@@ -867,6 +902,7 @@
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', function() {
                 const img = this.querySelector('img');
+                const badge = this.querySelector('.image-badge');
                 const overlay = document.createElement('div');
                 overlay.style.cssText = `
                     position: fixed;
@@ -874,28 +910,61 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.9);
+                    background: rgba(0, 0, 0, 0.95);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     z-index: 2000;
                     cursor: pointer;
+                    animation: fadeIn 0.3s ease;
+                `;
+                
+                const container = document.createElement('div');
+                container.style.cssText = `
+                    position: relative;
+                    max-width: 90%;
+                    max-height: 90%;
                 `;
                 
                 const fullImg = document.createElement('img');
                 fullImg.src = img.src;
+                fullImg.alt = img.alt;
                 fullImg.style.cssText = `
-                    max-width: 90%;
-                    max-height: 90%;
+                    max-width: 100%;
+                    max-height: 80vh;
                     border-radius: 10px;
                     box-shadow: 0 20px 60px rgba(0, 212, 255, 0.5);
                 `;
                 
-                overlay.appendChild(fullImg);
+                const imgTitle = document.createElement('div');
+                imgTitle.textContent = badge.textContent;
+                imgTitle.style.cssText = `
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    color: var(--primary-color);
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                `;
+                
+                const caption = document.createElement('p');
+                caption.textContent = this.querySelector('.gallery-overlay p').textContent;
+                caption.style.cssText = `
+                    color: white;
+                    text-align: center;
+                    margin-top: 15px;
+                    font-size: 1.1rem;
+                `;
+                
+                container.appendChild(imgTitle);
+                container.appendChild(fullImg);
+                container.appendChild(caption);
+                overlay.appendChild(container);
                 document.body.appendChild(overlay);
                 
                 overlay.addEventListener('click', () => {
-                    overlay.remove();
+                    overlay.style.animation = 'fadeOut 0.3s ease';
+                    setTimeout(() => overlay.remove(), 300);
                 });
             });
         });
@@ -936,7 +1005,7 @@
             this.style.animation = '';
         });
 
-        // Create glitch animation
+        // Create animations
         const style = document.createElement('style');
         style.textContent = `
             @keyframes glitch {
@@ -946,8 +1015,27 @@
                 60% { transform: translate(2px, 2px); }
                 80% { transform: translate(2px, -2px); }
             }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
         `;
         document.head.appendChild(style);
+
+        // Add hover sound effect simulation (visual feedback)
+        document.querySelectorAll('.btn, .nav-links a, .gallery-item').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.2s ease';
+            });
+        });
+
+        // Dynamic copyright year
+        const year = new Date().getFullYear();
+        document.querySelector('footer p').innerHTML = `&copy; ${year} Cyberraya Ejen Ali. Semua hak dilindungi oleh META.`;
     </script>
 </body>
 </html>
